@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MarketPrice</string>
+    <string name="channel_name">channel_name</string>
+    <string name="channel_description">channel_description</string>
+    <string name="content_title">Market Price</string>
+    <string name="content_text">xruu</string>
+    <string name="big_text">This is a big text</string>
+
+    <string name="price_title">SBR</string>
+    <string name="price_data">Сбербанк</string>
+    <string name="item_diffLastDay_text">0%</string>
+    <string name="item_price_text">00.00</string>
+    <string name="item_shortname_text">SBR</string>
+    <string name="item_name_text">Сбербанк</string>
+    <string name="add_to_favorite">add to favorite</string>
+    <string name="statictics">statictics</string>
+    <string name="graph">graph</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sort_select">Сортировать по:</string>
+</resources>

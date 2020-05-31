@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#37474f</color>
+    <color name="primary_dark">#102027</color>
+    <color name="primary_light">#62727b</color>
+    <color name="accent">#b0bec5</color>
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#b0bec5</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+
+    <color name="price_up">#FF64dd17</color>
+    <color name="price_up_off">#0064dd17</color>
+    <color name="price_down">#FFe53935</color>
+    <color name="price_down_off">#00e53935</color>
+</resources>
