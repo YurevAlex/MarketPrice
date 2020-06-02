@@ -13,11 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yurev.marketprice.DetailsFragment;
 import com.yurev.marketprice.R;
 import com.yurev.marketprice.fragments.FavoritesFragment;
 import com.yurev.marketprice.quotation.Quotation;
+import com.yurev.marketprice.retrofitmoex.GraphFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -151,6 +156,36 @@ public class MarketRecicleViewAdapter extends RecyclerView.Adapter<MarketRecicle
                     }
                     int position = mItemList.indexOf(mQuotation);
                     notifyItemChanged(position);
+                }
+            });
+
+            mGraphFrame.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentActivity fragmentActivity = (FragmentActivity) mContext;
+                    FragmentTransaction ft = fragmentActivity.getSupportFragmentManager().beginTransaction();
+                    Fragment prev = fragmentActivity.getSupportFragmentManager().findFragmentByTag("dialogGraph");
+                    if (prev != null) {
+                        ft.remove(prev);
+                    }
+                    ft.addToBackStack(null);
+                    GraphFragment graphFragment = new GraphFragment();
+                    graphFragment.show(ft, "dialogGraph");
+                }
+            });
+
+            mDetailsFrame.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentActivity fragmentActivity = (FragmentActivity) mContext;
+                    FragmentTransaction ft = fragmentActivity.getSupportFragmentManager().beginTransaction();
+                    Fragment prev = fragmentActivity.getSupportFragmentManager().findFragmentByTag("dialogDetails");
+                    if (prev != null) {
+                        ft.remove(prev);
+                    }
+                    ft.addToBackStack(null);
+                    DetailsFragment detailsFragment = new DetailsFragment(mQuotation);
+                    detailsFragment.show(ft, "dialogDetails");
                 }
             });
         }

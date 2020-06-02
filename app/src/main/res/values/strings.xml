@@ -19,4 +19,22 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sort_select">Сортировать по:</string>
+    <string name="details_secName">АО Сбербанк</string>
+    <string name="details_secName_title">Name</string>
+    <string name="details_valToDay">34220000000</string>
+    <string name="details_valToDay_title">trade volume to day</string>
+    <string name="details_open">196.25</string>
+    <string name="details_change">3.20</string>
+    <string name="details_change_title">change to day</string>
+    <string name="details_open_title">open price</string>
+    <string name="details_low">191.36</string>
+    <string name="details_low_title">min price to day</string>
+    <string name="details_changePercent">+1.14%</string>
+    <string name="details_changePercent_title">change to day (%)</string>
+    <string name="details_high_title">max price to day</string>
+    <string name="details_high">201.11</string>
+    <string name="details_last">196.25</string>
+    <string name="details_last_title">current price</string>
+    <string name="details_secId">SBER</string>
+    <string name="details_secId_title">ticker</string>
 </resources>
