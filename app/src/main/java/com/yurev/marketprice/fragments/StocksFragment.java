@@ -162,6 +162,12 @@ public class StocksFragment extends Fragment implements MarketPageInterface {
         DbAdapter.get(mContext).updateDb(MarketContract.TimeTable.NAME_TABLE, 1, mLastUpdateTime);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mTask.cancel(true);
+    }
+
     public LiveData<String> getStatus() {
         return mLiveData;
     }
@@ -255,7 +261,7 @@ public class StocksFragment extends Fragment implements MarketPageInterface {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            while (true) {
+            while (isCancelled()) {
                 if(mIsConnection == true && mIsPausedTask == false) {
                     Log.d("TASK","-----StocksTask-----");
                     MoexService moexService = RetrofitClient.getInstance().create(MoexService.class);
@@ -287,6 +293,7 @@ public class StocksFragment extends Fragment implements MarketPageInterface {
                     e.printStackTrace();
                 }
             }
+            return null;
         }
     }
 

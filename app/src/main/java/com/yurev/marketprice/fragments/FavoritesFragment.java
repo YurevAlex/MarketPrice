@@ -174,6 +174,12 @@ public class FavoritesFragment extends Fragment  implements MarketPageInterface,
         DbAdapter.get(mContext).updateDb(MarketContract.TimeTable.NAME_TABLE, 0, mLastUpdateTime);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mTask.cancel(true);
+    }
+
     public LiveData<String> getStatus() {
         return mLiveData;
     }
@@ -273,7 +279,7 @@ public class FavoritesFragment extends Fragment  implements MarketPageInterface,
 
         @Override
         protected Void doInBackground(Void... voids) {
-            while (true) {
+            while (!isCancelled()) {
                 if(mIsConnection == true && mIsPausedTask == false) {
                     Log.d("TASK","-----FavoritesTask-----");
                     MoexService moexService = RetrofitClient.getInstance().create(MoexService.class);
@@ -352,6 +358,7 @@ public class FavoritesFragment extends Fragment  implements MarketPageInterface,
                     e.printStackTrace();
                 }
             }
+            return null;
         }
     }
 }
