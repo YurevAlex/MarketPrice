@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yurev.marketprice.ItemTouchHelper.ItemTouchHelperAdapter;
 import com.yurev.marketprice.ItemTouchHelper.ItemTouchHelperViewHolder;
 import com.yurev.marketprice.R;
-import com.yurev.marketprice.fragments.FavoritesFragment;
+import com.yurev.marketprice.pages.FavoritesFragment;
 import com.yurev.marketprice.quotation.Quotation;
 
 import java.util.ArrayList;

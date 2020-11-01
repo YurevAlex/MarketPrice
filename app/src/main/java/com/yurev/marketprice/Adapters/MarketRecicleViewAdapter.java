@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yurev.marketprice.DetailsFragment;
 import com.yurev.marketprice.R;
-import com.yurev.marketprice.fragments.FavoritesFragment;
+import com.yurev.marketprice.pages.FavoritesFragment;
 import com.yurev.marketprice.quotation.Quotation;
 import com.yurev.marketprice.retrofitmoex.GraphFragment;
 

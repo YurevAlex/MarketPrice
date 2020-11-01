@@ -6,7 +6,7 @@ import android.util.Log;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yurev.marketprice.fragments.FavoritesFragment;
+import com.yurev.marketprice.pages.FavoritesFragment;
 
 public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
 

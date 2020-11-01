@@ -1,4 +1,4 @@
-package com.yurev.marketprice.fragments;
+package com.yurev.marketprice.pages;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -190,16 +190,6 @@ public class FuturesFragment extends Fragment implements MarketPageInterface {
     @Override
     public void setConnectionStatus(boolean isConnection) {
         mIsConnection = isConnection;
-    }
-
-    @Override
-    public void pauseTask() {
-        mIsPausedTask = true;
-    }
-
-    @Override
-    public void resumeTask() {
-        mIsPausedTask =false;
     }
 
     private void sortList (TypeOfSort selectType){

@@ -20,11 +20,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.yurev.marketprice.Adapters.MarketPagerAdapter;
-import com.yurev.marketprice.fragments.CurrenciesFragment;
-import com.yurev.marketprice.fragments.FavoritesFragment;
-import com.yurev.marketprice.fragments.FuturesFragment;
-import com.yurev.marketprice.fragments.MarketPageInterface;
-import com.yurev.marketprice.fragments.StocksFragment;
+import com.yurev.marketprice.pages.CurrenciesFragment;
+import com.yurev.marketprice.pages.FavoritesFragment;
+import com.yurev.marketprice.pages.FuturesFragment;
+import com.yurev.marketprice.pages.MarketPageInterface;
+import com.yurev.marketprice.pages.StocksFragment;
 
 import static com.yurev.marketprice.quotation.LocalQuotationLists.TypeOfSort;
 
@@ -102,9 +102,6 @@ public class MainActivity extends AppCompatActivity  implements SortSelectFragme
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                if (mCurrentPage != null) {
-                    mCurrentPage.pauseTask();
-                }
                 switch (position) {
                     case 0:
                         mCurrentPage = (MarketPageInterface) FavoritesFragment.getInstance();
@@ -119,7 +116,7 @@ public class MainActivity extends AppCompatActivity  implements SortSelectFragme
                         mCurrentPage = (MarketPageInterface) FuturesFragment.getInstance();
                         break;
                     default:
-                        Toast.makeText(getParent().getApplicationContext(), "Error mCurrentPage", Toast.LENGTH_SHORT);
+                        Toast.makeText(getParent().getApplicationContext(), "Error mCurrentPage", Toast.LENGTH_SHORT).show();
                 }
 
                 try {

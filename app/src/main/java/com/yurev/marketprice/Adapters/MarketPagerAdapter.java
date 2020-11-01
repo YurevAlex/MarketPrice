@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.yurev.marketprice.fragments.CurrenciesFragment;
-import com.yurev.marketprice.fragments.FavoritesFragment;
-import com.yurev.marketprice.fragments.FuturesFragment;
-import com.yurev.marketprice.fragments.StocksFragment;
+import com.yurev.marketprice.pages.CurrenciesFragment;
+import com.yurev.marketprice.pages.FavoritesFragment;
+import com.yurev.marketprice.pages.FuturesFragment;
+import com.yurev.marketprice.pages.StocksFragment;
 
 public class MarketPagerAdapter extends FragmentStateAdapter {
 
